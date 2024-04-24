@@ -66,7 +66,7 @@ const Quiz = () => {
     return <Welcome setShowWelcome={setShowWelcome} />;
   }
 
-  if (positionQuestion >= 15) {
+  if (positionQuestion >= 5) {
     return (
       <Results
         correctAnswers={correctAnswers}

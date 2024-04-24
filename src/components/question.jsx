@@ -1,8 +1,9 @@
+import React, { useState } from "react";
 import dataQuestions from "../questions.json";
 import buttonNext from "../images/2 Btton_Siguiente.png";
-import iconA from "../images/3 Btton_A.png"
-import iconB from "../images/4 Btton_B.png"
-import iconC from "../images/5 Btton_C.png"
+import iconA from "../images/3 Btton_A.png";
+import iconB from "../images/4 Btton_B.png";
+import iconC from "../images/5 Btton_C.png";
 
 const Question = ({
   positionQuestion,
@@ -10,15 +11,20 @@ const Question = ({
   answerSelected,
   setActiveQuestion,
 }) => {
+  const [currentQuestion, setCurrentQuestion] = useState(1);
+
   const preguntaNumeroStyle = {
-    fontSize: "20px",
+    fontSize: "40px",
   };
+
+  const nextQuestion = () => {
+    setCurrentQuestion(currentQuestion + 1);
+  };
+
   return (
     <div className="questions-container2">
       <div className="question-title">
-        <p style={preguntaNumeroStyle}>
-          Pregunta # {dataQuestions.results[positionQuestion].number}
-        </p>
+        <p style={preguntaNumeroStyle}>Pregunta #{currentQuestion}</p>
         <p>{dataQuestions.results[positionQuestion].question}</p>
       </div>
       <div className="buttons-questions-container">
@@ -33,6 +39,7 @@ const Question = ({
                   value={index}
                   onClick={setActiveQuestion}
                 >
+
                   <p id={index} value={index}>
                     {questionText}
                   </p>
@@ -46,6 +53,7 @@ const Question = ({
                 className="button-question-container"
                 onClick={setActiveQuestion}
               >
+                
                 <p id={index} value={index}>
                   {questionText}
                 </p>
@@ -54,15 +62,22 @@ const Question = ({
           }
         )}
       </div>
+                  <div className="icons">
+                    <img src={iconA} alt="iconA" />
+                    <img src={iconB} alt="iconB" />
+                    <img src={iconC} alt="iconC" />
+                  </div>
+
       {answerSelected !== null && (
         <div
           onClick={() => {
             onQuestionAnswer(positionQuestion, answerSelected);
-            setActiveQuestion(null);
+            nextQuestion();
           }}
           className="next-question"
         >
           <img src={buttonNext} alt="" width={175} height={50} />
+          {/* <p>siguiente</p> */}
         </div>
       )}
     </div>

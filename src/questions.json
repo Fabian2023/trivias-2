@@ -1,8 +1,8 @@
 {
   "results": [
     {
-      "number":1,
-      "question": "la inteligencia de mamá se ve reflejada atraves de:",
+      
+      "question": "La inteligencia de mamá se ve reflejada através de:",
       "correct_answer": 3,
       "answers": [
         "Sus consejos de vida: para cada pregunta tienen las palabras correctas",
@@ -11,7 +11,7 @@
       ]
     },
     {
-      "number":2,
+      
       "question": "El mejor consejo de la intigencia de mamá para superar la tusa es:",
       "correct_answer": 1,
       "answers": [
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "number":3,
+      
       "question": "¿Qué consejo de la inteligencia de mamá replicas con tus amigos? ",
       "correct_answer": 2,
       "answers":[
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "number":4,
+      
       "question": "La inteligencia de mamá te aconseja:",
       "correct_answer": 2,
       "answers": [
@@ -41,113 +41,13 @@
       ]
     },
     {
-      "number":5,
+      
       "question": "Según la inteligencia de mamá, el sereno es:",
       "correct_answer": 1,
       "answers": [
         "Lo que nos enferma si no llevamos buena chaqueta",
         "Un señor que sale de noche",
         "Un estado mental"
-      ]
-    },
-    {
-      "question": "¿Cómo se denomina el servicio de Mocion que ofrece equipos de última tecnología para eventos y activaciones?",
-      "correct_answer": 2,
-      "answers": [
-        "Venta de Equipos Avanzados.",
-        "Alquiler de Dispositivos Móviles.",
-        "Renting de Técnica y Equipos Tech.",
-        "Préstamo de Herramientas Digitales."
-      ]
-    },
-    {
-      "question": "¿Qué ofrece Mocion en su línea de negocio Phygital Brand to Go?",
-      "correct_answer": 2,
-      "answers": [
-        "Productos físicos con garantía extendida.",
-        "Asesoría legal y contable digital.",
-        "Experiencias con tecnología listas para usar para eventos y activaciones.",
-        "Paquetes de viaje y turismo digital."
-      ]
-    },
-    {
-      "question": "¿Cuáles son las ciudades donde Mocion tiene oficinas?",
-      "correct_answer": 1,
-      "answers": [
-        "Londres, París, Berlín.",
-        "Bogotá, CDMX, Miami.",
-        "Sydney, Auckland, Tokyo.",
-        "Nueva York, Los Ángeles, Chicago."
-      ]
-    },
-    {
-      "question": "¿Qué se puede descubrir en el servicio BTLAB de Mocion?",
-      "correct_answer": 1,
-      "answers": [
-        "Recetas de cocina y tutoriales de gastronomía.",
-        "Experiencias únicas, servicios de planeación y ejecución de campañas BTL y eventos.",
-        "Cursos de idiomas y programas de intercambio cultural.",
-        "Planes de entrenamiento físico y asesoramiento deportivo."
-      ]
-    },
-    {
-      "question": "¿Cuál es el lema de Mocion que refleja su filosofía hacia la innovación y realización de proyectos?",
-      "correct_answer": 1,
-      "answers": [
-        "Imagina, Innova, Implementa.",
-        "Si lo podemos soñar lo podemos crear.",
-        "Más allá de la tecnología.",
-        "Construyendo el futuro hoy."
-      ]
-    },
-    {
-      "question": "¿Cuál es el enfoque principal de Mocion en la creación de eventos y activaciones de marca?",
-      "correct_answer": 2,
-      "answers": [
-        "Entretenimiento puro y simple.",
-        "Generación de contenido estático.",
-        "Interactividad y procesamiento de datos.",
-        "Publicidad tradicional en medios impresos."
-      ]
-    },
-    {
-      "question": "¿Qué tipo de tecnologías se utilizan comúnmente en las experiencias creadas por Mocion?",
-      "correct_answer": 2,
-      "answers": [
-        "Tecnología analógica y mecánica.",
-        "Inteligencia artificial y realidad virtual.",
-        "Realidad aumentada y reconocimiento facial. ",
-        "Maquinaria pesada y equipo de construcción."
-      ]
-    },
-    {
-      "question": "¿Qué servicio ofrece Mocion para ayudar a sus clientes a medir el impacto de sus eventos y activaciones?",
-      "correct_answer": 2,
-      "answers": [
-        "GreatMind.co - Análisis de tendencias en redes sociales.",
-        "DataHub - Recopilación de datos en tiempo real.",
-        "GreatEye.co - Métricas y segmentación. ",
-        "TechSolutions - Soporte técnico durante eventos."
-      ]
-    },
-    {
-      "question": "¿Qué significan las siglas BTL en el servicio BTLAB de Mocion?",
-      "correct_answer": 2,
-      "answers": [
-        "Behind the Line.",
-        "Below the Level.",
-        "Below the Line. ",
-        "Beyond the Limits."
-      ]
-    },
-    {
-      "question": "¿Cuál es el objetivo principal de los stands interactivos ofrecidos por Mocion?",
-      "correct_answer": 1,
-      "answers": [
-        "Ser solo una exhibición estática de productos.",
-        "Atraer la atención del público mediante tecnologías innovadoras con construccion sostenible.",
-        "Proporcionar información impresa sobre la marca. ",
-        "Mantener a los asistentes alejados de los productos exhibidos."
       ]
     }
   ]

@@ -1,35 +1,29 @@
 import dataQuestions from "../questions.json";
-import panoramaImage from "../images/panorama.png";
-import heroFinish from "../images/hero-finish.png";
-import mocionLogo from "../images/logo.png";
-import congratsImage from "../images/congrats.png";
-import retryImage from "../images/retry.png";
+// import mocionLogo from "../images/logo.png";
+// import congratsImage from "../images/congrats.png";
+// import retryImage from "../images/retry.png";
 
 const Results = ({ correctAnswers, goToHome, answers }) => {
   return (
-    <div className="questions-container">
-      <img className="questions-img-panorama" src={panoramaImage} />
+    <div className="questions-container3">
       <div className="logo-container-finish">
-        <img src={mocionLogo} alt="" width="350" height={100} />
       </div>
       <div className="welcome-title-finish">
-        <img
-          src={
-            correctAnswers === dataQuestions.results.length
-              ? congratsImage
-              : retryImage
-          }
-          alt=""
-          width={600}
-          height={220}
-        />
+      {correctAnswers === dataQuestions.results.length ? (        
+          <h1>¡Felicidades!</h1>
+        ) : (
+          <h1>¡Puedes hacerlo mejor!</h1>
+        )}
         <p>Contestaste correctamente:</p>
       </div>
       <div className="buttons-questions-container">
-        <div className="question-button-selected" onClick={goToHome}>
-          <p className="finish-score">
+        <div className="question-button-selected2" onClick={goToHome}>
+          <div className="finish-score">
+          <p >
             {correctAnswers}/{dataQuestions.results.length}
           </p>
+          </div>
+          
         </div>
       </div>
       <p className="finish-text">
