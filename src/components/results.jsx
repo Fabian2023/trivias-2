@@ -4,6 +4,7 @@ import dataQuestions from "../questions.json";
 // import retryImage from "../images/retry.png";
 
 const Results = ({ correctAnswers, goToHome, answers }) => {
+  console.log("Respuestas correctas:", dataQuestions.results);
   return (
     <div className="questions-container3">
       <div className="logo-container-finish">
@@ -14,7 +15,7 @@ const Results = ({ correctAnswers, goToHome, answers }) => {
         ) : (
           <h1>¡Puedes hacerlo mejor!</h1>
         )}
-        <p>Contestaste correctamente:</p>
+        <p style={{ marginTop: '-3px' }}>Contestaste correctamente:</p>
       </div>
       <div className="buttons-questions-container">
         <div className="question-button-selected2" onClick={goToHome}>
@@ -26,7 +27,7 @@ const Results = ({ correctAnswers, goToHome, answers }) => {
           
         </div>
       </div>
-      <p className="finish-text">
+      <p className="finish-text"style={{ marginTop: '-10px' }}>
         <b>¡Gracias por participar!</b>
       </p>
       {/* <div className="complete-container">

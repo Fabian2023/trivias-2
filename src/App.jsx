@@ -76,7 +76,7 @@ const Quiz = () => {
     );
   }
 
-  if (dataQuestions.results?.length > 0 && positionQuestion < 15) {
+  if (dataQuestions.results?.length > 0 && positionQuestion < 5) {
     return (
       <Questions
         answerSelected={answerSelected}

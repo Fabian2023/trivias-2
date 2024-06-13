@@ -37,6 +37,25 @@
   }
 }
 
+.question-text {
+  display: inline-block;
+  width: 100%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin-top: 100px;
+  
+}
+
+.questions-container2 .question-title .question-text {
+  font-size: 24px;
+  line-height: 1.5;
+  /* Ajusta el ancho según sea necesario */
+  width: calc(100% - 20px);
+  padding: 0 10px;
+  
+}
+
+
 /* .questions-container {
   background-image: url(../public/KV_834X1042.png);
   background-position: center;

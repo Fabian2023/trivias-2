@@ -8,7 +8,7 @@ const Welcome = ({ setShowWelcome }) => {
         <h1>¡hola!</h1>
         <p>
           Bienvenidos a nuestra Trivia <br />
-          de la inteligencia de mamá.
+          de las enseñanzas de papá.
         </p>
       </div>
       <div className="buttons-questions-container">

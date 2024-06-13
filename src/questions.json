@@ -1,53 +1,52 @@
 {
   "results": [
     {
-      
-      "question": "La inteligencia de mamá se ve reflejada através de:",
-      "correct_answer": 3,
-      "answers": [
-        "Sus consejos de vida: para cada pregunta tienen las palabras correctas",
-        "Sus fotografias siempre cuentan una anécdota",
-        "Sus refranes populares: enseñan con gracia."
-      ]
-    },
-    {
-      
-      "question": "El mejor consejo de la intigencia de mamá para superar la tusa es:",
-      "correct_answer": 1,
-      "answers": [
-        "Mijo/a, no le pare bolas,dele tiempo que mujeres/hombres hay muchos",
-        "Mijo/a, yo sí veía que algo no me gustaba de esa persona",
-        "Mijo/a, no hay mal que dure 100 años, ni cuerpo que lo resista"
-      ]
-    },
-    {
-      
-      "question": "¿Qué consejo de la inteligencia de mamá replicas con tus amigos? ",
+      "question": "Un papá futbolero nos enseña la importancia de:",
       "correct_answer": 2,
+      "answers": [
+        "Respetar al adversario, atraves de un juego limpio y siguiendo siempre las reglas.",
+        "El trabajo en equipo dentro y fuera de la cancha.",
+        "A y B son correctas."
+      ]
+    },
+    {
+      
+      "question": "La mejor enseñanza de papá antes de ir a un picadito es :",
+      "correct_answer": 0,
+      "answers": [
+        "Mijo/a, el futbol es diversion y disfrute.",
+        "Mijo/a, el autocontrol siempre.",
+        "Mijo/a, amigos van y vienen."
+      ]
+    },
+    {
+      
+      "question": "¿Qué enseñanza de papá repites con los amigos?",
+      "correct_answer": 0,
       "answers":[
-        "Te lo digo por tu bien",
-        "Ten cuidado y no bebas mucho",
-        "Esta casa no es un hotel"
+        "Vida es solo uno, !a disfrutar¡.",
+        "Esos guayos baratos salen caros",
+        "el futbol es un deporte que se juega con la cabeza"
       ]
     },
     {
       
-      "question": "La inteligencia de mamá te aconseja:",
-      "correct_answer": 2,
-      "answers": [
-        "Cómo subir un contenido en RRSS para tener mejor  engagement",
-        "Cómo hablar con tu jefe para pedir un aumento",
-        "Cómo quitarte un orzuelo"
-      ]
-    },
-    {
-      
-      "question": "Según la inteligencia de mamá, el sereno es:",
+      "question": "Las enseñanzas de papá nos guian cuando...:",
       "correct_answer": 1,
       "answers": [
-        "Lo que nos enferma si no llevamos buena chaqueta",
-        "Un señor que sale de noche",
-        "Un estado mental"
+        "Necesitamos tomar desiciones despues de un partido.",
+        "Nos ponemos a debatir en pleno juego.",
+        "Vamos en combo al estadio."
+      ]
+    },
+    {
+      
+      "question": "Según las enseñanzas de papá el fútbol es como la vida misma:",
+      "correct_answer": 0,
+      "answers": [
+        "A veces ganas y a veces pierdes.lo importante es aprender de cada experiencia y seguir adelante. ",
+        "El complemento ideal para despejar la mente y hacernos sentir mejor",
+        "Todos podemos levantarnos despues de caer"
       ]
     }
   ]

@@ -21,11 +21,37 @@ const Question = ({
     setCurrentQuestion(currentQuestion + 1);
   };
 
-  return (
+   // Function to insert a line break at specified keywords
+   const formatQuestionText = (text, keyword) => {
+    const [firstPart, secondPart] = text.split(keyword);
+    return (
+      <>
+        {firstPart}
+        {keyword}
+        <br />
+        {secondPart}
+      </>
+    );
+  };
+
+  // Define break keywords for specific questions
+  const getBreakKeyword = (question) => {
+    if (question.includes("nos")) return " nos ";
+    if (question.includes("papá")) return " papá ";
+    return null; // No keyword found, return null
+  };
+
+
+   return (
     <div className="questions-container2">
       <div className="question-title">
         <p style={preguntaNumeroStyle}>Pregunta #{currentQuestion}</p>
-        <p>{dataQuestions.results[positionQuestion].question}</p>
+        <p className="question-text" style={{ marginTop: '-5px' }}>
+          {formatQuestionText(
+            dataQuestions.results[positionQuestion].question,
+            getBreakKeyword(dataQuestions.results[positionQuestion].question)
+          )}
+        </p>
       </div>
       <div className="buttons-questions-container">
         {dataQuestions.results[positionQuestion].answers.map(
@@ -37,9 +63,11 @@ const Question = ({
                   key={`${index}-questions`}
                   id={index}
                   value={index}
-                  onClick={setActiveQuestion}
+                  onClick={(e) => {
+                    console.log("Índice de la respuesta seleccionada:", index);
+                    setActiveQuestion(e);
+                  }}
                 >
-
                   <p id={index} value={index}>
                     {questionText}
                   </p>
@@ -51,9 +79,11 @@ const Question = ({
                 key={`${index}-questions`}
                 id={index}
                 className="button-question-container"
-                onClick={setActiveQuestion}
+                onClick={(e) => {
+                  console.log("Índice de la respuesta seleccionada:", index);
+                  setActiveQuestion(e);
+                }}
               >
-                
                 <p id={index} value={index}>
                   {questionText}
                 </p>
@@ -62,12 +92,11 @@ const Question = ({
           }
         )}
       </div>
-                  <div className="icons">
-                    <img src={iconA} alt="iconA" />
-                    <img src={iconB} alt="iconB" />
-                    <img src={iconC} alt="iconC" />
-                  </div>
-
+      <div className="icons">
+        <img src={iconA} alt="iconA" />
+        <img src={iconB} alt="iconB" />
+        <img src={iconC} alt="iconC" />
+      </div>
       {answerSelected !== null && (
         <div
           onClick={() => {
@@ -77,7 +106,6 @@ const Question = ({
           className="next-question"
         >
           <img src={buttonNext} alt="" width={175} height={50} />
-          {/* <p>siguiente</p> */}
         </div>
       )}
     </div>
