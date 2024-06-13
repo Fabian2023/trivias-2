@@ -5,7 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0 auto;
+  margin: 0 auto; 
+  overflow: hidden;
+
+
 }
 
 html,
@@ -32,6 +35,8 @@ code {
   background-size: contain;
   width: 100vw;
   height: 100vh;
+  overflow: hidden
+ 
 }
 .questions-container2 {
   background-image: url(../public/KV_834X1042_BG.png);
@@ -40,6 +45,7 @@ code {
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden
 }
 
 .questions-container3 {
