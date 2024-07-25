@@ -1,64 +1,100 @@
+import React, { useState } from "react";
+import Modal from "react-modal";
 import dataQuestions from "../questions.json";
-// import mocionLogo from "../images/logo.png";
-// import congratsImage from "../images/congrats.png";
-// import retryImage from "../images/retry.png";
+import ganaste from "../images/Recurso 1Te las sabes (1).png";
+import perdiste from "../images/Recurso 3intenta mañana (4).png";
 
 const Results = ({ correctAnswers, goToHome, answers }) => {
-  console.log("Respuestas correctas:", dataQuestions.results);
+  const [modalIsOpen, setModalIsOpen] = useState(true);
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+    window.location.reload();
+  };
+
+  const modalStyles = {
+    content: {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      background: "transparent",
+      padding: "20px",
+      border: "none",
+      boxShadow: "0 5px 15px rgba(0, 0, 0, 0.3)",
+    },
+    overlay: {
+      background: "rgba(0, 0, 0, 0.75)",
+    },
+  };
+
+  const totalQuestions = dataQuestions.results.length;
+  const incorrectAnswers = totalQuestions - correctAnswers;
+
   return (
     <div className="questions-container3">
-      <div className="logo-container-finish">
-      </div>
+      <div className="logo-container-finish"></div>
       <div className="welcome-title-finish">
-      {correctAnswers === dataQuestions.results.length ? (        
-          <h1>¡Felicidades!</h1>
+        {correctAnswers === totalQuestions ? (
+          <h1 style={{ color: "transparent" }}>¡Felicidades!</h1>
         ) : (
-          <h1>¡Puedes hacerlo mejor!</h1>
+          <h1 style={{ color: "transparent" }}>¡Puedes hacerlo mejor!</h1>
         )}
-        <p style={{ marginTop: '-3px' }}>Contestaste correctamente:</p>
       </div>
-      <div className="buttons-questions-container">
-        <div className="question-button-selected2" onClick={goToHome}>
-          <div className="finish-score">
-          <p >
-            {correctAnswers}/{dataQuestions.results.length}
-          </p>
-          </div>
-          
+      <div className="buttons-questions-containers">
+        <div className="question-button-selected2s" onClick={goToHome}>
+          <div className="finish-scores"></div>
         </div>
       </div>
-      <p className="finish-text"style={{ marginTop: '-10px' }}>
-        <b>¡Gracias por participar!</b>
-      </p>
-      {/* <div className="complete-container">
-        <img src={heroFinish} alt="" />
-      </div> */}
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Resultados"
+        style={modalStyles}
+      >
+        <div style={{ position: "relative", textAlign: "center" }}>
+          {correctAnswers === totalQuestions ? (
+            <img
+              src={ganaste}
+              alt="Ganaste"
+              style={{ width: "80%", marginBottom: "20px" , marginTop:"90px" }}
+            />
+          ) : (
+            <img
+              src={perdiste}
+              alt="Perdiste"
+              style={{ width: "80%", marginBottom: "20px" }}
+            />
+          )}
+          <p
+            style={{
+              position: "absolute",
+              top: "37.6%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              color: correctAnswers === totalQuestions ? "transparent" : "white",
+              fontWeight: "bold",
+              marginTop: "0",
+            }}
+          >
+            {incorrectAnswers}
+          </p>
+
+          <button
+            onClick={closeModal}
+            style={{ position: "absolute", left: "35%", marginTop: "85%", width: "150px",  background: "transparent",border: "none",
+              height: "50px", }}
+          >
+           
+          </button>
+        </div>
+      </Modal>
     </div>
   );
-  /* return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div>
-        <div className="flex flex-col justify-center items-center ">
-          <div>You Scored</div>
-          <div color="text.secondary">
-            {correctAnswers}/{dataQuestions.results.length}
-          </div>
-
-          {dataQuestions.results.map((question, index) => {
-            return (
-              <div className="flex  self-start" key={index}>
-                <div className="ml-5">{answers[index] ? "✅" : "❌"}</div>
-                <div>
-                  <div>{question.question}</div>
-                </div>
-              </div>
-            );
-          })}
-          <button onClick={goToHome}>play again</button>
-        </div>
-      </div>
-    </div>
-  ); */
 };
 
 export default Results;

@@ -4,6 +4,7 @@ import buttonNext from "../images/2 Btton_Siguiente.png";
 import iconA from "../images/3 Btton_A.png";
 import iconB from "../images/4 Btton_B.png";
 import iconC from "../images/5 Btton_C.png";
+import iconD from "../images/icono-07.png";
 
 const Question = ({
   positionQuestion,
@@ -21,8 +22,8 @@ const Question = ({
     setCurrentQuestion(currentQuestion + 1);
   };
 
-   // Function to insert a line break at specified keywords
-   const formatQuestionText = (text, keyword) => {
+  // Function to insert a line break at specified keywords
+  const formatQuestionText = (text, keyword) => {
     const [firstPart, secondPart] = text.split(keyword);
     return (
       <>
@@ -41,11 +42,10 @@ const Question = ({
     return null; // No keyword found, return null
   };
 
-
-   return (
+  return (
     <div className="questions-container2">
       <div className="question-title">
-        <p style={preguntaNumeroStyle}>Pregunta #{currentQuestion}</p>
+        <p style={preguntaNumeroStyle}>Prueba tus conocimientos</p>
         <p className="question-text" style={{ marginTop: '-5px' }}>
           {formatQuestionText(
             dataQuestions.results[positionQuestion].question,
@@ -82,6 +82,7 @@ const Question = ({
                 onClick={(e) => {
                   console.log("Índice de la respuesta seleccionada:", index);
                   setActiveQuestion(e);
+                  nextQuestion();
                 }}
               >
                 <p id={index} value={index}>
@@ -96,6 +97,7 @@ const Question = ({
         <img src={iconA} alt="iconA" />
         <img src={iconB} alt="iconB" />
         <img src={iconC} alt="iconC" />
+        <img src={iconD} alt="iconD" /> 
       </div>
       {answerSelected !== null && (
         <div

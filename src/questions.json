@@ -1,52 +1,103 @@
 {
   "results": [
     {
-      "question": "Un papá futbolero nos enseña la importancia de:",
+      "question": "¿En qué año vendió Comcel su primer celular?",
       "correct_answer": 2,
       "answers": [
-        "Respetar al adversario, atraves de un juego limpio y siguiendo siempre las reglas.",
-        "El trabajo en equipo dentro y fuera de la cancha.",
-        "A y B son correctas."
+        "1998",
+        "1990",
+        "1995",
+        "2000"
       ]
     },
     {
-      
-      "question": "La mejor enseñanza de papá antes de ir a un picadito es :",
+      "question": "¿Cómo se llamó la primera tarjeta de comunicación prepagada en Colombia?",
       "correct_answer": 0,
       "answers": [
-        "Mijo/a, el futbol es diversion y disfrute.",
-        "Mijo/a, el autocontrol siempre.",
-        "Mijo/a, amigos van y vienen."
+        "Tarjeta Amigo",
+        "Tarjeta soy Colombia",
+        "Tarjeta Claro",
+        "Tarjeta Claro que puedes"
       ]
     },
     {
-      
-      "question": "¿Qué enseñanza de papá repites con los amigos?",
+      "question": "¿En que año se unifica Comcel y Telmex para crear Claro Colombia?",
       "correct_answer": 0,
-      "answers":[
-        "Vida es solo uno, !a disfrutar¡.",
-        "Esos guayos baratos salen caros",
-        "el futbol es un deporte que se juega con la cabeza"
+      "answers": [
+        "2012",
+        "2010",
+        "2015",
+        "2001"
       ]
     },
     {
-      
-      "question": "Las enseñanzas de papá nos guian cuando...:",
+      "question": "¿En que año pone Claro en funcionamiento su red 4G LTE?",
       "correct_answer": 1,
       "answers": [
-        "Necesitamos tomar desiciones despues de un partido.",
-        "Nos ponemos a debatir en pleno juego.",
-        "Vamos en combo al estadio."
+        "1990",
+        "2014",
+        "2001",
+        "2024"
       ]
     },
     {
-      
-      "question": "Según las enseñanzas de papá el fútbol es como la vida misma:",
-      "correct_answer": 0,
+      "question": "¿En qué año se lanzó Claro Música?",
+      "correct_answer": 1,
       "answers": [
-        "A veces ganas y a veces pierdes.lo importante es aprender de cada experiencia y seguir adelante. ",
-        "El complemento ideal para despejar la mente y hacernos sentir mejor",
-        "Todos podemos levantarnos despues de caer"
+        "1999",
+        "2015",
+        "2005",
+        "2024"
+      ]
+    },
+    {
+      "question": "¿cual es la función principal de Mi Claro App?",
+      "correct_answer": 3,
+      "answers": [
+        "Realizar consultas",
+        "Realizar trámites",
+        "Consultar estados de cuenta",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "¿Quienes fueron los primeros en realizar pruebas 5G en Colombia?",
+      "correct_answer": 1,
+      "answers": [
+        "Gobierno y cableras",
+        "Claro y Nokia",
+        "Nokia y Com SAS",
+        "Nokia y Motorola"
+      ]
+    },
+    {
+      "question": "¿En que año lanza Claro el Primer Centro de Experiencia de Internet of Things en Colombia?",
+      "correct_answer": 3,
+      "answers": [
+        "2001",
+        "2024",
+        "2005",
+        "2018"
+      ]
+    },
+    {
+      "question": "¿Con quién hace alianza Claro para realizar el piloto 5G?",
+      "correct_answer": 3,
+      "answers": [
+        "Con la Alcaldia de Medellin",
+        "Con Ruta N",
+        "Con Nokia",
+        "Con todas las anteriores"
+      ]
+    },
+    {
+      "question": "¿Qué beneficios tiene ser cliente Todo Claro?",
+      "correct_answer": 3,
+      "answers": [
+        "Tener servicios en casa + plan postpago",
+        "Más velocidad en el internet Hogar",
+        "Descuentos exclusivos en equipos de ref. seleccionadas",
+        "Todas las anteriores"
       ]
     }
   ]
