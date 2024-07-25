@@ -9,7 +9,7 @@ const isLocalhost = Boolean(
 export function register(config) {
   if ('serviceWorker' in navigator) {
     // The URL of the service worker script must be relative to the root of the site.
-    const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+    const swUrl = `${process.env.PUBLIC_URL}/serviceWorker.js`;
 
     if (isLocalhost) {
       // This is running on localhost. Check if a service worker still exists or not.
