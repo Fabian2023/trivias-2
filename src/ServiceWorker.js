@@ -1,3 +1,5 @@
+// src/ServiceWorker.js
+
 const CACHE_NAME = 'my-pwa-cache-v1';
 const urlsToCache = [
   '/',
@@ -42,13 +44,15 @@ self.addEventListener('activate', (event) => {
           if (cacheWhitelist.indexOf(cacheName) === -1) {
             return caches.delete(cacheName);
           }
-          return Promise.resolve(); // Añadir esto para asegurar que siempre se devuelve una promesa
+          return Promise.resolve(); // Asegúrate de devolver siempre una promesa
         })
       );
     })
   );
 });
 
+
+// Función para registrar el service worker
 export function register() {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -59,6 +63,15 @@ export function register() {
         .catch(error => {
           console.log('Error al registrar el Service Worker:', error);
         });
+    });
+  }
+}
+
+// Función para desregistrar el service worker
+export function unregister() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(registration => {
+      registration.unregister();
     });
   }
 }
