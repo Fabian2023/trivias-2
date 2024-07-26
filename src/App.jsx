@@ -66,7 +66,7 @@ const Quiz = () => {
     return <Welcome setShowWelcome={setShowWelcome} />;
   }
 
-  if (positionQuestion >= 10) {
+  if (positionQuestion >= 5) {
     return (
       <Results
         correctAnswers={correctAnswers}
@@ -77,7 +77,7 @@ const Quiz = () => {
     );
   }
 
-  if (dataQuestions.results?.length > 0 && positionQuestion < 10) {
+  if (dataQuestions.results?.length > 0 && positionQuestion < 5) {
     return (
       <Questions
         answerSelected={answerSelected}

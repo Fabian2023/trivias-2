@@ -18,6 +18,9 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         return cache.addAll(urlsToCache);
       })
+      .catch((error) => {
+        console.error('Error al abrir el cache:', error);
+      })
   );
 });
 
@@ -29,7 +32,12 @@ self.addEventListener('fetch', (event) => {
         if (response) {
           return response;
         }
-        return fetch(event.request);
+        return fetch(event.request).catch((error) => {
+          console.error('Error al realizar fetch:', error);
+        });
+      })
+      .catch((error) => {
+        console.error('Error al encontrar en cache:', error);
       })
   );
 });
@@ -48,9 +56,11 @@ self.addEventListener('activate', (event) => {
         })
       );
     })
+    .catch((error) => {
+      console.error('Error al activar el Service Worker:', error);
+    })
   );
 });
-
 
 // Función para registrar el service worker
 export function register() {
