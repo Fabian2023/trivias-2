@@ -31,7 +31,7 @@ const Results = ({ correctAnswers, goToHome, answers }) => {
     },
   };
 
-  const totalQuestions = dataQuestions.results.length;
+  const totalQuestions = 5
   const incorrectAnswers = totalQuestions - correctAnswers;
 
   return (
