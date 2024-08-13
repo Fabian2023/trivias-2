@@ -10,11 +10,12 @@
 <img alt="JavaScript" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
 <img alt="Termux" src="https://img.shields.io/badge/-Termux-000000?style=flat-square&logo=android&logoColor=white" />
 <img alt="Vercel" src="https://img.shields.io/badge/-Vercel-000000?style=flat-square&logo=vercel&logoColor=white" />
+</p>
 
+## Flujo de la Experiencia
 
-
-
-
+<p align='center'>
+<img src="https://i.imgur.com/7QaAzIP.png" alt="Flujo de la experiencia" />
 </p>
 
 ## Instalación y Ejecución
