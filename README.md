@@ -15,7 +15,7 @@
 ## Flujo de la Experiencia
 
 <p align='center'>
-<img src="https://i.imgur.com/7QaAzIP.png" alt="Flujo de la experiencia" />
+<img src="https://i.imgur.com/ZWNAQ0d.png" alt="Flujo de la experiencia" />
 </p>
 
 ## Brandeo
