@@ -3,12 +3,15 @@
 **Trivia Claro** es una aplicación de trivia desarrollada con React, diseñada  en pantallas de 834x1042 píxeles. Este proyecto está configurado para ejecutarse localmente en tablets utilizando Termux, lo que permite que funcione sin conexión a internet. Además, la aplicación está desplegada en Vercel para acceso en línea.
 
 
+## Tecnologías
 
-## Tecnologías Utilizadas
+<p align='center'>
+<img alt="React" src="https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white" />
+<img alt="JavaScript" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+<img alt="Firebase" src="https://img.shields.io/badge/-Firebase-DD2C00?style=flat-square&logo=firebase&logoColor=white" />
+<img alt="Vite" src="https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
 
-- **React**: Librería principal para la construcción de la interfaz de usuario.
-- **Termux**: Aplicación utilizada para configurar un entorno de servidor en tablets Android.
-- **Vercel**: Plataforma de despliegue para la versión en línea de la aplicación.
+</p>
 
 ## Instalación y Ejecución
 
