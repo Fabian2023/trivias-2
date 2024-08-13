@@ -18,6 +18,11 @@
 <img src="https://i.imgur.com/7QaAzIP.png" alt="Flujo de la experiencia" />
 </p>
 
+## Brandeo
+
+Artes
+Artes puntuales de cada una de las pantallas del flujo.
+
 ## Instalación y Ejecución
 
 ### Requisitos
