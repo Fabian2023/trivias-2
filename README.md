@@ -1,6 +1,6 @@
 # Trivia Claro (juegos de destreza)
 
-**Trivia Claro** es una aplicación de trivia desarrollada con React, diseñada  en pantallas de 834x1042 píxeles. Este proyecto está configurado para ejecutarse localmente en tablets utilizando Termux, lo que permite que funcione sin conexión a internet. Además, la aplicación está desplegada en Vercel para acceso en línea.
+**Trivia Claro** es una aplicación de trivia desarrollada con React, diseñada  en pantallas de 834x1042 píxeles. se neceista instalar Termux, lo que permite que funcione sin conexión a internet. Además, la aplicación está desplegada en Vercel para acceso en línea.
 
 
 ## Tecnologías
