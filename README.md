@@ -62,5 +62,5 @@
 
 ### Despliegue en Vercel
 
-La aplicación está desplegada en Vercel y puede ser accedida [aquí](https://tu-enlace-vercel.vercel.app).
+La aplicación está desplegada en Vercel y puede ser accedida [aquí](trivias-2.vercel.app).
 
