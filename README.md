@@ -92,5 +92,5 @@ Artes puntuales de cada una de las pantallas del flujo.
 
 ### Resolución
 
-La trivia fue desarrollada de manera responsive para poder adaptarse a cualquier tamañno de pantalla.
+La trivia fue desarrollada de manera responsive para poder adaptarse a cualquier tamaño de pantalla.
 
