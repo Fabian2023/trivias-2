@@ -1,6 +1,8 @@
-# Trivia Claro (juegos de destreza)
+# Trivias
 
-**Trivia Claro** es una aplicación de trivia desarrollada con React, diseñada  en pantallas de 834x1042 píxeles. se neceista instalar Termux, lo que permite que funcione sin conexión a internet. Además, la aplicación está desplegada en Vercel para acceso en línea.
+Trivias es una webapp brandeable que toma un archivo JSON con una serie de preguntas relacionadas con el tema de la empresa o evento, y muestra en pantalla dichas preguntas con formato de respuesta multiple, dependiendo de la selección se cuenta o no como acierto.
+
+Al final de la experiencia se realiza un conteo de las preguntas acertadas y dependiendo un umbral dado se determina la pantalla que se presenta (ganaste o perdiste).
 
 
 ## Tecnologías
@@ -14,14 +16,25 @@
 
 ## Flujo de la Experiencia
 
-<p align='center'>
-<img src="https://i.imgur.com/ZWNAQ0d.png" alt="Flujo de la experiencia" />
-</p>
+![Flujo de la experiencia](/public/flujoexp.png)
+1. Pantalla de bienvenida.
+2. Registro del usuario. (Es necesario contar con conexión a internet).
+3. Desarrollo de la trivia.
+4. Pantalla de despedida.
 
 ## Brandeo
 
-Artes
+### Preguntas
+* Pregunta correspondiente.
+* Posibles respuestas (es posible utilizar imágenes).
+* Respuesta correcta.
+
+### Artes
 Artes puntuales de cada una de las pantallas del flujo.
+
+* Para background, imágenes en 1080x1920. formato PNG.
+* Assets como imágenes para respuesta. formato PNG 
+* Assets como logos, personajes, botones, etc. formato SVG.
 
 ## Instalación y Ejecución
 
@@ -66,14 +79,18 @@ Artes puntuales de cada una de las pantallas del flujo.
    
       ```bash
       cd /storage/emulated/0/build
-      
-        ```
+      ```
+    - Ejecutar el desarrollo.
+      ```bash
+      http-server -p 3000
+      ```
       
     - Acceder a la aplicación desde el navegador de la tablet en `http://localhost:3000`.
       Aquí se obtienen las URLs para acceder desde el navegador, por ejemplo: 127.0.0.1:3000.
+
       Ejecutar la URL en el navegador para acceder a la trivia en modo offline
 
-### Despliegue en Vercel
+### Resolución
 
-La aplicación está desplegada en Vercel y puede ser accedida [aquí](trivias-2.vercel.app).
+La trivia fue desarrollada de manera responsive para poder adaptarse a cualquier tamañno de pantalla.
 
