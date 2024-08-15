@@ -1,3 +1,4 @@
+
 // src/ServiceWorker.js
 
 const CACHE_NAME = 'my-pwa-cache-v1';
@@ -72,8 +73,29 @@ export function register() {
         })
         .catch(error => {
           console.log('Error al registrar el Service Worker:', error);
+
         });
+      } else {
+        // Service worker found. Proceed as normal.
+        registerValidSW(swUrl, config);
+      }
+    })
+    .catch(() => {
+      console.error(
+        'No internet connection found. App is running in offline mode.'
+      );
     });
+}
+
+export function unregister() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready
+      .then(registration => {
+        registration.unregister();
+      })
+      .catch(error => {
+        console.error(error.message);
+      });
   }
 }
 
