@@ -1,67 +1,79 @@
-// serviceWorker.js
 
-const isLocalhost = Boolean(
-  window.location.hostname === 'localhost' ||
-  window.location.hostname === '[::1]' ||
-  window.location.hostname.match(/127\.0\.0\.1/)
-);
+// src/ServiceWorker.js
 
-export function register(config) {
-  if ('serviceWorker' in navigator) {
-    // The URL of the service worker script must be relative to the root of the site.
-    const swUrl = `${process.env.PUBLIC_URL}/serviceWorker.js`;
+const CACHE_NAME = 'my-pwa-cache-v1';
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/static/js/bundle.js',
+  '/static/js/main.chunk.js',
+  '/static/js/0.chunk.js',
+  '/static/css/main.chunk.css',
+  // Añade aquí los demás recursos que quieras cachear
+];
 
-    if (isLocalhost) {
-      // This is running on localhost. Check if a service worker still exists or not.
-      checkValidServiceWorker(swUrl, config);
+// eslint-disable-next-line no-restricted-globals
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        return cache.addAll(urlsToCache);
+      })
+      .catch((error) => {
+        console.error('Error al abrir el cache:', error);
+      })
+  );
+});
 
-      // Add some additional logging to localhost, pointing developers to the
-      // service worker/PWA documentation.
-      navigator.serviceWorker.ready.then(() => {
-        console.log(
-          'This web app is being served cache-first by a service worker. To learn more, visit https://cra.link/PWA'
-        );
-      });
-    } else {
-      // Is not localhost. Just register the service worker.
-      registerValidSW(swUrl, config);
-    }
-  }
-}
-
-function registerValidSW(swUrl, config) {
-  navigator.serviceWorker
-    .register(swUrl)
-    .then(registration => {
-      registration.onupdateavailable = () => {
-        const waitingServiceWorker = registration.waiting;
-        if (waitingServiceWorker) {
-          waitingServiceWorker.postMessage({ type: 'SKIP_WAITING' });
+// eslint-disable-next-line no-restricted-globals
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response;
         }
-      };
-      if (config && config.onSuccess) {
-        config.onSuccess(registration);
-      }
-    })
-    .catch(error => {
-      console.error('Error during service worker registration:', error);
-    });
-}
+        return fetch(event.request).catch((error) => {
+          console.error('Error al realizar fetch:', error);
+        });
+      })
+      .catch((error) => {
+        console.error('Error al encontrar en cache:', error);
+      })
+  );
+});
 
-function checkValidServiceWorker(swUrl, config) {
-  fetch(swUrl)
-    .then(response => {
-      // Ensure service worker exists.
-      const contentType = response.headers.get('content-type');
-      if (
-        response.status === 404 ||
-        (contentType != null && contentType.indexOf('javascript') === -1)
-      ) {
-        // No service worker found. Probably a different app. Unregister any existing service worker.
-        navigator.serviceWorker.ready.then(registration => {
-          registration.unregister().then(() => {
-            window.location.reload();
-          });
+// eslint-disable-next-line no-restricted-globals
+self.addEventListener('activate', (event) => {
+  const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+          return Promise.resolve(); // Asegúrate de devolver siempre una promesa
+        })
+      );
+    })
+    .catch((error) => {
+      console.error('Error al activar el Service Worker:', error);
+    })
+  );
+});
+
+// Función para registrar el service worker
+export function register() {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/serviceWorker.js')
+        .then(registration => {
+          console.log('Service Worker registrado con éxito:', registration);
+        })
+        .catch(error => {
+          console.log('Error al registrar el Service Worker:', error);
+
         });
       } else {
         // Service worker found. Proceed as normal.
@@ -84,5 +96,14 @@ export function unregister() {
       .catch(error => {
         console.error(error.message);
       });
+  }
+}
+
+// Función para desregistrar el service worker
+export function unregister() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(registration => {
+      registration.unregister();
+    });
   }
 }

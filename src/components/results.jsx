@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import dataQuestions from "../questions.json";
+//import dataQuestions from "../questions.json";
 import ganaste from "../images/Recurso 1Te las sabes (1).png";
 import perdiste from "../images/Recurso 3intenta mañana (4).png";
 

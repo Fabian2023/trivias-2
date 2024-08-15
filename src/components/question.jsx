@@ -15,7 +15,7 @@ const Question = ({
   const [currentQuestion, setCurrentQuestion] = useState(1);
 
   const preguntaNumeroStyle = {
-    fontSize: "40px",
+    fontSize: "41px",
   };
 
   const nextQuestion = () => {
