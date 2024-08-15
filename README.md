@@ -1,6 +1,7 @@
 # Trivia Interactiva
 
 Trivia Interactiva es una webapp personalizable que utiliza un archivo JSON para cargar una serie de preguntas temáticas, diseñadas específicamente para una empresa o evento. La aplicación presenta estas preguntas en pantalla, una a la vez, en un formato de respuesta múltiple. Según las respuestas seleccionadas, se contabilizan los aciertos del usuario.
+
 Al finalizar la trivia, se realiza un recuento de las respuestas correctas y, dependiendo de un umbral predefinido, se muestra una pantalla de "ganaste" o "perdiste", ofreciendo así una experiencia interactiva y adaptada a las necesidades del cliente.
 
 
